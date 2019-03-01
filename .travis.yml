@@ -1,6 +1,4 @@
-language: python3
-python:
-- "3.7-dev"
+language: python
 install:
 	pip install pytest
 script:
