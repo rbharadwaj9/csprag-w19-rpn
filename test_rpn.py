@@ -18,4 +18,6 @@ class TestBasics(unittest.TestCase):
     def test_exponent(self):
         result = rpn.calculate("2 4 ^")
         self.assertEqual(16, result)
-
+    def test_decimal2fraction(self):
+        result = rpn.calculate("3 4 /")
+        self.assertEqual("3/4", str(result))
