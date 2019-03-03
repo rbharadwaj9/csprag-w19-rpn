@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import operator
+from fractions import Fraction
 
 
 operators = {
@@ -26,7 +27,14 @@ def calculate(myarg):
         print(stack)
     if len(stack) != 1:
         raise TypeError("Too many parameters")
-    return stack.pop()
+    result = stack.pop()
+    print(type(result))
+    if int(result) != result:
+        #if input("Convert to fraction? (y/n)") == "y":
+        return Fraction.from_float(result)
+    else:
+        return result
+
 
 def main():
     while True:
